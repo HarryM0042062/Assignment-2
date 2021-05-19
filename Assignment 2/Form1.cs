@@ -48,7 +48,9 @@ namespace Assignment_2
 
             }
             catch
-            {}
+            {
+                MessageBox.Show("error cylinder");
+            }
 
         }
 
@@ -88,11 +90,48 @@ namespace Assignment_2
             {
                 double ConeRadius = double.Parse(textBox2.Text);
                 double ConeHeight = double.Parse(textBox3.Text);
-                double ConeSurfaceArea = Math.PI * ConeRadius * (ConeRadius + Math.Sqrt(ConeHeight + ConeRadius);
-                label4.Text = "Surface Area" + ConeSurfaceArea;
+                double ConeSurfaceArea = Math.PI * ConeRadius * (ConeRadius + Math.Sqrt(ConeHeight + ConeRadius));
+                double ConeVolume = Math.PI * ConeRadius * ConeRadius * (ConeHeight / 3);
+                label4.Text = "Surface Area =" + ConeSurfaceArea;
+                label5.Text = "Volume =" + ConeVolume;
+            }
+
+            catch
+            {
+                MessageBox.Show("Cone");
+            }
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double CylinderRadius = double.Parse(textBox4.Text);
+                double CylinderHeight = double.Parse(textBox5.Text);
+                double CylinderSurfaceArea = 2 * Math.PI * CylinderRadius * CylinderHeight + 2 * Math.PI * (CylinderRadius * CylinderRadius);
+                double CylinderVolume = Math.PI * (CylinderRadius * CylinderRadius) * CylinderHeight;
+                label8.Text = "Surface Area =" + CylinderSurfaceArea;
+                label9.Text = "Volume =" + CylinderVolume;
             }
             catch
-            {//fix the code on wednesday }
+            {
+                MessageBox.Show("error Cylinder");
+            }
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
