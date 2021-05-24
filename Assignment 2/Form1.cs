@@ -133,5 +133,39 @@ namespace Assignment_2
         {
 
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double ConeEdge = double.Parse(textBox6.Text);
+                double ConeSurfaceArea = 6 * (ConeEdge * ConeEdge);
+                double ConeVolume = ConeEdge * ConeEdge * ConeEdge;
+                label14.Text = "Surface Area =" + ConeSurfaceArea;
+                label15.Text = "Volume =" + ConeVolume;
+            }
+            catch
+            {
+                MessageBox.Show("Error Cube");
+            }
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double CuboidLength = double.Parse(textBox7.Text);
+                double CuboidWidth = double.Parse(textBox8.Text);
+                double CuboidHeight = double.Parse(textBox9.Text);
+                double CuboidSurfaceArea = 2 * (CuboidLength * CuboidWidth) + 2 * (CuboidLength * CuboidHeight) + 2 * (CuboidHeight * CuboidWidth);
+                double CuboidVolume = CuboidHeight * CuboidLength * CuboidWidth;
+                label18.Text = "Surface Area =" + CuboidSurfaceArea;
+                label19.Text = "Volume =" + CuboidVolume;
+            }
+            catch
+            {
+                MessageBox.Show("Error Cuboid");
+            }
+        }
     }
 }
